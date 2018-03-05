@@ -1,0 +1,91 @@
+#main_header {
+	position: relative;
+	z-index: 0;
+	background-image: url('../images/bg-header.jpg');
+	background-size: cover;
+	background-repeat: no-repeat;	
+	background-position: 50%;
+	height: 100vh;
+
+	&::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba( 0, 0, 0, 0.65 );
+        z-index: -1;
+    }
+}
+
+.navbar {
+
+	padding-top: 40px;
+
+	.navbar-brand {
+		color: $w;
+		font-size: 24px;
+		font-weight: 600;
+	}
+
+	.navbar-nav {
+		li {
+			display: inline-block;
+			margin: 5px;
+
+			a {
+				display: block;
+				color: $w;
+				font-size: 16px;
+				padding: 10px 25px;
+			}
+
+			.btn {
+				background-color: $primary;
+				font-size: 13px;
+				letter-spacing: 0.8px;
+				text-transform: uppercase;
+				margin-left: 15px;
+				border: none;
+
+				&:hover {
+					background-color: $second;
+				}
+			}
+		}
+	}
+	
+
+}
+
+
+.hero_content {
+	margin-top: 200px;
+	max-width: 650px;
+
+	p {
+		font-size: 20px;
+	}
+
+	h1 {
+		color: $w;
+		font-size: 58px;
+		font-weight: 700;
+	}
+
+	.btn {
+		margin-top: 15px;
+		display: inline-block;
+		padding: 10px 30px;
+		color: $w;
+		border: 1px solid $w;
+	
+		&:hover, &:active, &:focus {
+			background-color: $w;
+			color: $c_b;
+		}
+
+	}
+
+}
