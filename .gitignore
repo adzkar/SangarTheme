@@ -62,4 +62,4 @@ dist
 bower.json
 gulpfile.js
 package-lock.json
-package-lock.json
+package.json
