@@ -1,2 +1,1 @@
-# SangarTheme
-Modern Front End Workflow
+# adzkar.github.io

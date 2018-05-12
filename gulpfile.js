@@ -56,7 +56,7 @@ gulp.task('images', function(){
   .pipe(cache(imagemin({
       interlaced: true
     })))
-  .pipe(gulp.dest('dist/images'))
+  .pipe(gulp.dest('images'))
 });
 
 gulp.task('useref', function(){
@@ -64,16 +64,16 @@ gulp.task('useref', function(){
     .pipe(useref())
     .pipe(gulpIf('*.js', uglify()))
     .pipe(gulpIf('*.css', cssnano()))
-    .pipe(gulp.dest('dist'))
+    .pipe(gulp.dest(''))
 });
 
 gulp.task('fonts', function() {
   return gulp.src('app/fonts/**/*')
-  .pipe(gulp.dest('dist/fonts'))
+  .pipe(gulp.dest('fonts'))
 })
 
 gulp.task('clean:dist', function() {
-  return del.sync(['dist/**/*', '!dist/images', '!dist/images/**/*']);
+  return del.sync(['dist/**/*', '!images', '!images/**/*']);
 });
 
 gulp.task('watch', ['browserSync', 'sass'], function() {

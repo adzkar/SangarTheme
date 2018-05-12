@@ -5,7 +5,28 @@
 	background-size: cover;
 	background-repeat: no-repeat;	
 	background-position: 50%;
+	
 	height: 100vh;
+	min-height: 800px;
+
+	@media screen and (max-width: 992px) {
+		min-height: 768px;
+	}
+
+	@media screen and (max-width: 667px) {
+		min-height: 450px;
+	}
+
+	@media screen and (max-width: 375px) {
+		min-height: 400px;
+		height: 80vh;
+	}
+
+	@media screen and (max-width: 320px) {
+		min-height: 480px;
+		height: 100vh;
+	}
+
 
 	&::after {
         content: '';
@@ -17,47 +38,95 @@
         background-color: rgba( 0, 0, 0, 0.65 );
         z-index: -1;
     }
-}
+	.navbar {
 
-.navbar {
+		padding-top: 40px;
 
-	padding-top: 40px;
+		.navbar-brand {
+			color: $w;
+			font-size: 24px;
+			font-weight: 600;
+		}
 
-	.navbar-brand {
-		color: $w;
-		font-size: 24px;
-		font-weight: 600;
-	}
+		.navbar-toggler {
+			color: $w;
+			border-color: $w;
 
-	.navbar-nav {
-		li {
-			display: inline-block;
-			margin: 5px;
-
-			a {
-				display: block;
+			.fa {
 				color: $w;
-				font-size: 16px;
-				padding: 10px 25px;
 			}
+		}	
 
-			.btn {
-				background-color: $primary;
-				font-size: 13px;
-				letter-spacing: 0.8px;
-				text-transform: uppercase;
-				margin-left: 15px;
-				border: none;
+		.navbar-nav {
+			li {
+				display: inline-block;
+				margin: 5px;
 
-				&:hover {
-					background-color: $second;
+				a {
+					display: block;
+					color: $w;
+					font-size: 16px;
+					font-weight: 500;
+					padding: 10px 25px;
+					opacity: 0.9;
+				}
+
+				.btn {
+					background-color: $primary;
+					font-size: 13px;
+					letter-spacing: 0.8px;
+					text-transform: uppercase;
+					margin-left: 15px;
+					border: none;
+
+					&:hover {
+						background-color: $second;
+					}
 				}
 			}
-		}
-	}
-	
+
+			@media screen and (max-width: 992px) {
+				padding-top: 30px;
+
+				.collapse.show,
+				.collapsing {
+					position: absolute;
+					left: 0;
+					top: 95px;
+					width: 100%;
+					background-color: $c_b;
+					text-align: center;
+
+					.navbar-nav {
+						padding: 30px 0;
+					}
+
+					li {
+						a {
+							padding-top: 15px;
+							padding-bottom: 15px;
+						}
+					}
+
+					.btn {
+						display: inline-block;
+						margin-left: 0 !important;
+						margin-top: 10px;
+						padding-top: 10px;
+						padding-bottom: 10px;
+					}
+
+				}
+			}
+
+		} 
+		// Media Query
+
+	} // Nabar
+
 
 }
+
 
 
 .hero_content {

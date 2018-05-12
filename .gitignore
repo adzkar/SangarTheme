@@ -57,3 +57,9 @@ typings/
 # dotenv environment variables file
 .env
 
+dist
+
+bower.json
+gulpfile.js
+package-lock.json
+package-lock.json
