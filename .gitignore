@@ -58,8 +58,3 @@ typings/
 .env
 
 dist
-
-bower.json
-gulpfile.js
-package-lock.json
-package.json
