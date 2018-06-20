@@ -4,8 +4,20 @@ body {
 	font-weight: 400;
 	letter-spacing: 0.2px;
 	color: $c_content;
-	
+
 
 	font-smoothing: antialiased;
 }
 
+.title_section {
+	text-transform: uppercase;
+	font-size: 15px;
+	font-weight: 700;
+	color: $c_ts;
+}
+
+.desc_section {
+	font-size: 36px;
+	font-weight: 600;
+	color: $c_b;
+}
